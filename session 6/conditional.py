@@ -109,10 +109,21 @@ Return True if the party with the given values is successful, or False otherwise
 
 # print (fibonacci(4))
 
-def fact(n):
-    if n==1:
-        return 1
-    else:
-        return fact(n-1)*n
+# def fact(n):
+#     if n==1:
+#         return 1
+#     else:
+#         return fact(n-1)*n
 
-print (fact(4))
+# print (fact(4))
+
+'''3/2= 1, 3%2=1*2+1 9%mod4=4*2+1 25%10=(10*2+5)= 5'''
+
+print ('current a, b', a, b)
+if b==0:
+    return a
+else: 
+    return gcdRecur (b, a % b)
+    
+
+
