@@ -9,8 +9,8 @@
 
 # print ('the final result:' , result)
 
-# for i in range (1, 11):
-#     print (i)
+for i in range (1, 11):
+    print (i)
 
 # for i in range (1001):
 #     result= result+i
@@ -65,9 +65,9 @@ import time
 
 # counter = counter +1
 
-# a=1
-# a +=1
-# a
+a=1
+a +=1
+a
 
 # message= 'Pranjal'
 # for letter in message:
@@ -83,11 +83,11 @@ import time
 
 # print(count)
 
-while True: 
-    line = input ('>')
-    print ('prsee "q" to quit')
-    if line == 'q':
-        break
-    print (line)
+# while True: 
+#     line = input ('>')
+#     print ('prsee "q" to quit')
+#     if line == 'q':
+#         break
+#     print (line)
 
-print ('Done!')
+# print ('Done!')
