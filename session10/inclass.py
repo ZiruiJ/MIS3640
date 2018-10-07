@@ -1,4 +1,3 @@
-#exercise 3#
 
 
 import math
@@ -14,10 +13,10 @@ def nested_sum(t):
     # >>> nested_sum(t)
     21
     """
-#     total = 0
-#     for nested in t:
-#         total += sum(nested)
-#     return total
+    # total = 0
+    # for nested in t:
+    #     total += sum(nested)
+    # return total
 # print(nested_sum)
 
 # t = [1, 2, 3]
@@ -32,50 +31,51 @@ def cumsum(t):
     >>> t = [1, 2, 3]
     >>> cumsum(t)
     [1, 3, 6]
-    """
+    # """
+    # t = [1, 2, 3]
     # total = 0
     # res = []
     # for x in t:
     #     total += x
     #     res.append(total)
+    #     print('current list:')
+    #     print (res)
     # return res
 
 
 
 
 
+#"""Returns all but the first and last elements of t.
+#   t: list
 
-    """Returns all but the first and last elements of t.
+ #   returns: new list
 
-    t: list
-
-    returns: new list
-
-    Expected output:
-    >>> t = [1, 2, 3, 4]
-    >>> middle(t)
-    [2, 3]
-    """
+  #  Expected output:
+   # >>> t = [1, 2, 3, 4]
+    #>>> middle(t)
+   # [2, 3]
+    
 # t= [1,2,3,4]
 # t= t[1:-1]
 # print(t)
 
+# def middle (t):
+#     return t[1:-1]
+
+# t= [1,2,3,4,5,6,7]
+# print (middle(t))
+# print (t)
+
+
+
 t = [1, 2, 3, 4]
 def chop(t):
-    """Removes the first and last elements of t.
+    t. remove (t[1])
+    return t
 
-    t: list
-
-    returns: None
-
-    Expected output:
-    >>> t = [1, 2, 3, 4]
-    >>> chop(t)
-    >>> t
-    [2, 3]"""
-
-# del t[0]
-# del t[-1]
+t= [1,2,3,4]
+print (chop(t))
 
 
 def is_sorted(t):
@@ -94,8 +94,18 @@ def is_sorted(t):
 #     return t == sorted(t)
 
 # print (is_sorted([1,2,2]))
-# print (is_sorted(['b','a']))
+# # print (is_sorted(['b','a']))
 
+# def is_sorted(t):
+#     previous= t[0]
+#     for c in t:
+#         if c< previous:
+#             return False
+#         previous=c
+#     return True
+
+# print(is_sorted(['a','b','c','d']))
+# print(is_sorted(['a','b','c','a']))
 
 
 def is_anagram(word1, word2):
@@ -173,28 +183,28 @@ def has_adjacent_duplicates(s):
 # print(has_adjacent_duplicates('abca'))
 # print(has_adjacent_duplicates('abbc'))
 
-def main():
-    t = [[1, 2], [3], [4, 5, 6]]
-    print(nested_sum(t))
+# def main():
+#     t = [[1, 2], [3], [4, 5, 6]]
+#     print(nested_sum(t))
 
-    t = [1, 2, 3]
-    print(cumsum(t))
+#     t = [1, 2, 3]
+#     print(cumsum(t))
 
-    t = [1, 2, 3, 4]
-    print(middle(t))
-    chop(t)
-    print(t)
+#     t = [1, 2, 3, 4]
+#     print(middle(t))
+#     chop(t)
+#     print(t)
 
-    print(is_sorted([1, 2, 2]))
-    print(is_sorted(['b', 'a']))
+#     print(is_sorted([1, 2, 2]))
+#     print(is_sorted(['b', 'a']))
 
-    print(is_anagram('stop', 'pots'))
-    print(is_anagram('different', 'letters'))
-    print(is_anagram([1, 2, 2], [2, 1, 2]))
+#     print(is_anagram('stop', 'pots'))
+#     print(is_anagram('different', 'letters'))
+#     print(is_anagram([1, 2, 2], [2, 1, 2]))
 
-    print(has_duplicates('cba'))
-    print(has_duplicates('abba'))
+#     print(has_duplicates('cba'))
+#     print(has_duplicates('abba'))
 
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
