@@ -1,0 +1,76 @@
+>>> doc= 'It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.'
+>>>
+>>> import string
+>>> string. punctuation
+'!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+>>> string.whitespace
+' \t\n\r\x0b\x0c'
+>>> strippable= string. punctuation + string. whitespace
+>>> for word in doc:
+...     #remove all the unneeded parts
+...
+  File "<stdin>", line 3
+
+    ^
+IndentationError: expected an indented block
+>>>
+>>> for word in doc.split ():
+...     print (word)
+...
+It
+is
+a
+truth
+universally
+acknowledged,
+that
+a
+single
+man
+in
+possession
+of
+a
+good
+fortune,
+must
+be
+in
+want
+of
+a
+wife.
+>>> for word in doc.split)_:
+  File "<stdin>", line 1
+    for word in doc.split)_:
+                         ^
+SyntaxError: invalid syntax
+>>> for word in doc.split():
+...     word= word.strip (strippable)
+...     word=word.lower()
+...     print (word)
+...
+it
+is
+a
+truth
+universally
+acknowledged
+that
+a
+single
+man
+in
+possession
+of
+a
+good
+fortune
+must
+be
+in
+want
+of
+a
+wife
+>>>
