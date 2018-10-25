@@ -50,78 +50,104 @@ def skip_gutenberg_header(fp):
             break
 
 
-def total_words(hist):
-    """Returns the total of the frequencies in a histogram."""
-    return sum (hist.values ())
+# def total_words(hist):
+#     """Returns the total of the frequencies in a histogram."""
+#     return sum (hist.values ())
 
 
-def different_words(hist):
-    """Returns the number of different words in a histogram."""
-    return len(hist)
-    ##len it's count of unique words##
+# def different_words(hist):
+#     """Returns the number of different words in a histogram."""
+#     return len(hist)
+#     ##len it's count of unique words##
 
 
-def most_common(hist):
+# def most_common(hist):
+#     """Makes a list of word-freq pairs in descending order of frequency.
+
+#     hist: map from word to frequency
+
+#     returns: list of (frequency, word) pairs
+#     """
+#     t= []           #turple 
+#     for key, value in hist.items():
+#         t.append ((value,key))
+#     t.sort(reverse=True)
+#     return t
+
+def most_common(hist ,excluding_stopwords= True):
     """Makes a list of word-freq pairs in descending order of frequency.
+    excluding_stopwords: a boolean value. If it is True, do not include 
+    any stopwords in the list.
 
     hist: map from word to frequency
 
     returns: list of (frequency, word) pairs
     """
-    t= []
-    for key, value in h.items():
-        t.append ((value,key))
+    t= []           #turple 
+    stopwords= process_file('session13/stopwords.txt', False)
+    stopwords= list(stopwords.keys())
+    # print (stopwords)
+
+    for word, freq in hist.items():
+        if excluding_stopwords:
+            if word  in stopwords:
+                continue
+        
+        t.append ((freq,word))
     t.sort(reverse=True)
     return t
 
 
-def print_most_common(hist, num=10):
-    """Prints the most commons words in a histgram and their frequencies.
 
-    hist: histogram (map from word to frequency)
-    num: number of words to print
-    """
-    t= most_common(h)
-    print 'the most common words are:'
-    for freq, word in t [0:10]:
-        print word, '\t', freq
+
+# def print_most_common(hist, num=10):
+#     """Prints the most commons words in a histgram and their frequencies.
+
+#     hist: histogram (map from word to frequency)
+#     num: number of words to print
+#     """
+#     t= most_common(h)
+#     print ('the most common words are:')
+#     for freq, word in t [0:10]:
+#         print word, '\t', freq
     
 
 
-def subtract(d1, d2):
-    """Returns a dictionary with all keys that appear in d1 but not d2.
+# def subtract(d1, d2):
+#     """Returns a dictionary with all keys that appear in d1 but not d2.
 
-    d1, d2: dictionaries
-    """
-    res= dict()
-    for key in d1: 
-        if key not in d2:
-            res [key]= None
-    retur res
+#     d1, d2: dictionaries
+#     """
+#     res= dict()
+#     for key in d1: 
+#         if key not in d2:
+#             res [key]= None
+#     retur res
 
 
-def random_word(hist):
-    """Chooses a random word from a histogram.
+# def random_word(hist):
+#     """Chooses a random word from a histogram.
 
-    The probability of each word is proportional to its frequency.
-    """
-    t= []
-    for word, freq in hist. items():
-        t.extend([word]* freq)
+#     The probability of each word is proportional to its frequency.
+#     """
+#     t= []
+#     for word, freq in hist. items():
+#         t.extend([word]* freq)
     
-    return random.choice (t)
+#     return random.choice (t)
 
 
 def main():
     hist = process_file('session13/Pride and Prejudice.txt', skip_header=True)
     print (hist)
-    # print('Total number of words:', total_words(hist))
-    print('Number of different words:', different_words(hist))
+#     # print('Total number of words:', total_words(hist))
+#     print('Number of different words:', different_words(hist))
 
     t = most_common(hist)
-    print('The most common words are:')
-    for freq, word in t[0:20]:
-        print(word, '\t', freq)
+
+    print('The most common words are:' )
+    # for freq, word in t[0:20]:
+    #     print(word, '\t', freq)
 
     # words = process_file('words.txt', skip_header=False)
 
@@ -135,5 +161,5 @@ def main():
     #     print(random_word(hist), end=' ')
 
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
