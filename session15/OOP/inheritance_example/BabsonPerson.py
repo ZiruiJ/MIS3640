@@ -23,11 +23,11 @@ class BabsonPerson(Person):
         return (self.name + " says: " + utterance)
 
 
-p1 = BabsonPerson('Zhi')
-p2 = BabsonPerson('Jack')
-p3 = BabsonPerson('Steve')
-p4 = Person('John')     #person does not have speak 
+# p1 = BabsonPerson('Zhi')
+# p2 = BabsonPerson('Jack')
+# p3 = BabsonPerson('Steve')
+# p4 = Person('John')     #person does not have speak 
 
-print (p2. speak ('i feel good today'))
+# print (p2. speak ('i feel good today'))
 
-print (p4. speak " i dont feel good today")
+# print (p4. speak " i dont feel good today")

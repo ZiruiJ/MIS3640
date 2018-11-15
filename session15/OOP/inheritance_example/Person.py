@@ -2,6 +2,8 @@ import datetime
 
 
 class Person(object):
+        nextIdNum = 0
+
 
     def __init__(self, name):
         """create a person called name"""

@@ -28,8 +28,8 @@ class Point:
         return value== self.x or value== self.y
 
 
-    def print_point(self):
-        print('({}, {}).'.format(self.x, self.y))
+    # def print_point(self):
+    #     print('({}, {}).'.format(self.x, self.y))
 
 
 # def print_point(p):
